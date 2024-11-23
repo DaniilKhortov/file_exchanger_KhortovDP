@@ -1,0 +1,298 @@
+
+
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #CE0E2D;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.title {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-family: Rubik;
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: -0.025em;
+}
+
+.menu-bl {
+    background-color: #bd223b;
+}
+
+.content {
+    display: flex;
+}
+
+.menu-bl-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.box-right {
+
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.box-left {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.reg-measure {
+    border-left: 3px solid #911d30;
+    height: 25px;
+}
+
+.reg-btn, .account-btn {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    /*background-color: #911d30;*/
+    background-color: transparent;
+    border: none;
+    border-radius: 45px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+    .reg-btn:hover, .account-btn:hover, .reg-btn:active, .account-btn:active {
+        /*        background: white;
+        box-shadow: 0px 0px 5px 1px grey;*/
+        cursor: pointer;
+        /*        color: #911d30;*/
+    }
+
+
+.hidden {
+    display: none;
+}
+
+.account-info p {
+    font-family: Rubik;
+    font-weight: 700;
+    font-size: 15px;
+    color: white
+}
+
+.file-list-bl {
+    margin-top: 20px;
+}
+
+
+.file-list-bl-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-element, .list-titles {
+    margin: 10px auto;
+    align-items: center;
+    display: flex;
+    background: rgb(237, 242, 240);
+    border-radius: 25px;
+    justify-content: space-between;
+    width: 95%;
+    padding: 20px;
+}
+
+.list-element-left, .list-titles-left {
+    display: grid;
+    grid-template-columns: 80px 35px auto;
+    column-gap: 20px;
+    justify-content: start;
+    text-align: left;
+    font-size: 15px;
+}
+
+
+.list-element-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.list-element-left p, .list-titles-left p {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    color: gray;
+}
+
+.list-titles-left p {
+    font-weight: 500;
+}
+
+.list-element-left p {
+    overflow-wrap: break-word;
+    max-width: 75px;
+}
+
+.list-titles {
+    background: none;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+}
+
+.eye-crossed-icon {
+    display: none;
+}
+
+    .download-icon button, .upload-icon button, .eye-icon button, .eye-crossed-icon button, .trash-bin-icon button {
+        color: transparent;
+        background-color: transparent;
+        border: none;
+    }
+
+button svg:hover, button svg:active {
+    transform: scale(1.2);
+}
+
+
+
+.reg-bl {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reg-bl-content {
+    width: 95%;
+    border-radius: 25px;
+    background: rgb(237,242,240);
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.register-field {
+    text-align: center;
+}
+
+    .register-field p {
+        margin-top: 15px;
+    }
+
+.register-btn {
+    text-align: center;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+    .register-btn button {
+        background-color: #911d30;
+        width: 150px;
+        height: 50px;
+    }
+
+        .register-btn button:hover, .register-btn button:active {
+            background: white;
+            box-shadow: 0px 0px 5px 1px grey;
+            cursor: pointer;
+            color: #911d30;
+        }
+
+.register-field p {
+    padding: 10px 10px 10px 10px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 24px;
+    background: -webkit-linear-gradient(#CE0E2D, #911d30);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.title-reg {
+    padding-top: 20px;
+    font-size: 40px;
+    background: -webkit-linear-gradient(#CE0E2D, #911d30);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-family: Rubik;
+    line-height: 1.2;
+}
+
+.reg-request {
+    margin-top: 15px;
+}
+
+    .reg-request p {
+        font-family: Roboto, sans-serif;
+        font-weight: 500;
+        color: gray;
+        font-size: 18px;
+    }
+
+    .reg-request a:hover {
+        cursor: pointer;
+    }
+
+.register-field input[type="text"],
+.register-field input[type="password"] {
+    width: 50%;
+    height: 30px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    color: #3d3d3d
+}
+
+.reg-request a, .message-fail, .message-success {
+    background: -webkit-linear-gradient(#CE0E2D, #911d30);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-family: Roboto;
+}
+
+
+.message-success {
+    background: -webkit-linear-gradient(#46eb34, #37c427);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.messages{
+    display:flex;
+    justify-content:center;
+    margin-top:15px;
+
+}

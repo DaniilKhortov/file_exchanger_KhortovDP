@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html en>
+<head>
+    <meta charset="utf-8">
+    <title>Online File Loader</title>
+    <link rel="icon" href="./icon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="description(not required)">
+
+    <!--main styles-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/desktop.css') }}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="content">
+            <div class="title">
+                <h1>Online File Uploader</h1>
+            </div>
+
+
+
+        </div>
+
+
+
+    </header>
+
+    <div class="menu-bl">
+        <div class="menu-bl-content">
+            <div class="menu-box box-left">
+                <a href="{{ url_for('main.home') }}">
+                    <button class="reg-btn ">
+                        <svg fill="white" height="24" width="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             viewBox="0 0 476.213 476.213" xml:space="preserve">
+                        <polygon points="476.213,223.107 57.427,223.107 151.82,128.713 130.607,107.5 0,238.106 130.607,368.714 151.82,347.5
+	                    57.427,253.107 476.213,253.107 " />
+                    </svg>
+                    </button>
+                </a>
+
+            </div>
+
+            <div class="menu-box box-right" id="no-account">
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="reg-bl">
+        <div class="reg-bl-content">
+            <div class="register-title">
+                <p class="title title-reg">Account Creation</p>
+            </div>
+
+            <form method="POST">
+                <div class="register-field">
+                    <div class="reg-element">
+                        <p><b>Login</b></p>
+                        <div class="en-field">
+                            <input type="text" id="email" placeholder="Supported e-mail: gmail.com, yahoo.com, outlook.com" name="email" required>
+                        </div>
+                    </div>
+                    <div class="reg-element">
+                        <p><b>Password</b></p>
+                        <div class="en-field">
+                            <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
+                        </div>
+                    </div>
+                    <div class="reg-element">
+                        <p><b>Repeat password</b></p>
+                        <div class="en-field">
+                            <input type="password" id="psw2" placeholder="Repeat Password" name="psw-repeat" required>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="register-btn ">
+                    <button class="reg-btn " id="regBtn">
+                        <p>Create</p>
+                    </button>
+                </div>
+            </form>
+            <div class="messages">
+                {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                <p class="message-{{ category }}">{{ message }}</p>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--script section-->
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+
+</body>
+</html>
+

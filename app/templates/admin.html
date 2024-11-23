@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html en>
+<head>
+    <meta charset="utf-8">
+    <title>Online File Loader</title>
+    <link rel="icon" href="./icon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="description(not required)">
+
+    <!--main styles-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/desktop.css') }}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="content">
+            <div class="title">
+                <h1>Online File Uploader</h1>
+            </div>
+
+
+
+        </div>
+
+
+
+    </header>
+
+    <div class="menu-bl">
+        <div class="menu-bl-content">
+            <div class="menu-box box-left">
+
+            </div>
+
+            <div class="menu-box box-right" id="no-account">
+                <div class="reg-measure"></div>
+                <a href="{{ url_for('main.login') }}">
+                    <button class="reg-btn">
+                        <p>Log In</p>
+                    </button>
+                </a>
+
+            </div>
+
+            <div class="menu-box box-right hidden" id="account">
+                <div class="reg-measure"></div>
+                <div class="account-info account-active" id="instructionBtn">
+                    <p id="accountName"></p>
+                </div>
+                <a href="/logout">
+                    <button class="account-btn" id="accountExit">
+                        <p>Log Out</p>
+                    </button>
+                </a>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="file-list-bl">
+        <div class="file-list-bl-content">
+
+            <div class="list-titles">
+                <div class="list-titles-left">
+                    <p>Name</p>
+
+                    <p>Type</p>
+
+                    <p>Upload date</p>
+                </div>
+                <div class="list-titles-right">
+                    <div class="upload-icon">
+                        <button>
+
+                            <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48" width="24" height="24">
+                                <g fill="gray">
+                                    <polygon points="24,10.9 13,24 35,24" fill="gray" />
+                                    <rect x="20" y="24" width="8" height="4" fill="gray" />
+                                    <rect x="20" y="30" width="8" height="4" fill="gray" />
+                                    <rect x="20" y="36" width="8" height="4" fill="gray" />
+                                    <rect x="6" y="40" width="36" height="4" fill="gray" />
+                                </g>
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-element">
+                <div class="list-element-left">
+                    <p>0123456789012345678901234567890</p>
+
+                    <p>PNG</p>
+
+                    <p>10.08.2005</p>
+                </div>
+
+                <div class="list-element-right">
+                    <div class="eye-crossed-icon">
+                        <button>
+
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="eyeCrossedIconTitle" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"> <title id="eyeCrossedIconTitle">Hidden (crossed eye)</title> <path d="M22 12C22 12 19 18 12 18C5 18 2 12 2 12C2 12 5 6 12 6C19 6 22 12 22 12Z" /><path d="M3 21L20 4" /> <circle cx="12" cy="12" r="3" />  </svg>
+                        </button>
+
+                    </div>
+                    <div class="eye-icon">
+                        <button>
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="eyeCrossedIconTitle" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"> <title id="eyeCrossedIconTitle">Hidden (crossed eye)</title> <path d="M22 12C22 12 19 18 12 18C5 18 2 12 2 12C2 12 5 6 12 6C19 6 22 12 22 12Z" /> <circle cx="12" cy="12" r="3" />  </svg>
+                        </button>
+
+                    </div>
+
+                    <div class="download-icon">
+                        <button>
+                            <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48" width="24" height="24">
+                                <g fill="gray">
+                                    <polygon points="24,37.1 13,24 35,24" />
+                                    <rect x="20" y="4" width="8" height="4" />
+                                    <rect x="20" y="10" width="8" height="4" />
+                                    <rect x="20" y="16" width="8" height="11" />
+                                    <rect x="6" y="40" width="36" height="4" />
+                                </g>
+                            </svg>
+                        </button>
+
+                    </div>
+
+                    <div class="trash-bin-icon">
+                        <button>
+                            <svg width="24" height="24" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                                    <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-261.000000, -205.000000)" fill="gray">
+                                        <path d="M268,220 C268,219.448 268.448,219 269,219 C269.552,219 270,219.448 270,220 L270,232 C270,232.553 269.552,233 269,233 C268.448,233 268,232.553 268,232 L268,220 L268,220 Z M273,220 C273,219.448 273.448,219 274,219 C274.552,219 275,219.448 275,220 L275,232 C275,232.553 274.552,233 274,233 C273.448,233 273,232.553 273,232 L273,220 L273,220 Z M278,220 C278,219.448 278.448,219 279,219 C279.552,219 280,219.448 280,220 L280,232 C280,232.553 279.552,233 279,233 C278.448,233 278,232.553 278,232 L278,220 L278,220 Z M263,233 C263,235.209 264.791,237 267,237 L281,237 C283.209,237 285,235.209 285,233 L285,217 L263,217 L263,233 L263,233 Z M277,209 L271,209 L271,208 C271,207.447 271.448,207 272,207 L276,207 C276.552,207 277,207.447 277,208 L277,209 L277,209 Z M285,209 L279,209 L279,207 C279,205.896 278.104,205 277,205 L271,205 C269.896,205 269,205.896 269,207 L269,209 L263,209 C261.896,209 261,209.896 261,211 L261,213 C261,214.104 261.895,214.999 262.999,215 L285.002,215 C286.105,214.999 287,214.104 287,213 L287,211 C287,209.896 286.104,209 285,209 L285,209 Z" id="trash" sketch:type="MSShapeGroup">
+
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="list-element">
+            <div class="list-element-left">
+                <p>SealHunter2</p>
+
+                <p>PNG</p>
+
+                <p>10.08.2005</p>
+            </div>
+
+            <div class="list-element-right">
+                <div class="download-icon">
+                    <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48" width="24" height="24">
+                        <g fill="gray">
+                            <polygon points="24,37.1 13,24 35,24" />
+                            <rect x="20" y="4" width="8" height="4" />
+                            <rect x="20" y="10" width="8" height="4" />
+                            <rect x="20" y="16" width="8" height="11" />
+                            <rect x="6" y="40" width="36" height="4" />
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--script section-->
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>
+

@@ -1,0 +1,169 @@
+@media screen and (max-width: 300px) {
+    .list-element-left, .list-titles-left {
+        font-size: 12px;
+        grid-template-columns: 40px 35px auto;
+        column-gap: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .list-element, .list-titles {
+        flex-direction: column;
+    }
+
+    .list-element-right {
+        margin-top: 10px;
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .list-element-left p, .list-titles-left p {
+        max-width: none;
+    }
+
+    .list-element-left, .list-titles-left {
+        grid-template-columns: 200px 50px auto;
+    }
+}
+
+
+
+@media screen and (min-width: 700px) {
+    .reg-btn, .account-btn {
+        background-color: #911d30;
+    }
+
+    .reg-measure {
+        height: 30px;
+    }
+
+    .reg-btn:hover, .account-btn:hover, .reg-btn:active, .account-btn:active {
+        background: white;
+        box-shadow: 0px 0px 5px 1px grey;
+        color: #911d30;
+    }
+
+        .reg-btn:hover svg {
+            fill: #911d30;
+            stroke: #911d30;
+        }
+
+
+    .reg-bl-content {
+        width: 70%;
+    }
+
+    .list-element-left, .list-titles-left {
+        font-size: 18px;
+        grid-template-columns: 300px 50px auto;
+    }
+
+        .list-element-left p, .list-titles-left p {
+            max-width: none;
+        }
+
+    .list-element-right {
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .reg-btn, .account-btn {
+        font-size: 20px;
+        width: 90px;
+        height: 40px;
+        background-color: #911d30;
+    }
+
+    .account-info p{
+        font-size: 20px;
+    }
+
+    .reg-btn svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .reg-measure {
+        height: 30px;
+    }
+
+    header h1 {
+        font-size: 80px;
+    }
+
+    .list-element-left, .list-titles-left {
+        font-size: 18px;
+        grid-template-columns: 400px 50px auto;
+    }
+
+    .upload-icon button svg {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .reg-btn, .account-btn {
+        font-size: 24px;
+        width: 120px;
+        height: 50px;
+        background-color: #911d30;
+    }
+    .account-info p{
+        font-size: 24px;
+    }
+    .reg-measure {
+        height: 45px;
+    }
+
+    .list-element-left, .list-titles-left {
+        font-size: 22px;
+    }
+}
+
+.reg-btn svg {
+    width: 45px;
+    height: 45px;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .list-element-left, .list-titles-left {
+        grid-template-columns: 700px 50px auto;
+    }
+
+    .reg-bl-content {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    .list-element-left, .list-titles-left {
+        grid-template-columns: 1000px 50px auto;
+        font-size: 24px;
+    }
+
+    .list-element-right button svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .reg-bl-content {
+        width: 45%;
+    }
+
+    .upload-icon button svg {
+        width: 45px;
+        height: 45px;
+    }
+}

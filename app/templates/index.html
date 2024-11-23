@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html en>
+<head>
+    <meta charset="utf-8">
+    <title>Online File Loader</title>
+    <link rel="icon" href="./icon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="description(not required)">
+
+    <!--main styles-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/desktop.css') }}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="content">
+            <div class="title">
+                <h1>Online File Uploader</h1>
+            </div>
+
+
+
+        </div>
+
+
+
+    </header>
+
+    <div class="menu-bl">
+        <div class="menu-bl-content">
+            <div class="menu-box box-left">
+
+            </div>
+
+            <div class="menu-box box-right" id="no-account">
+                <div class="reg-measure"></div>
+                <a href="{{ url_for('main.login') }}">
+                    <button class="reg-btn">
+                        <p>Log In</p>
+                    </button>
+                </a>
+
+            </div>
+
+            <div class="menu-box box-right hidden" id="account">
+                <div class="reg-measure"></div>
+                <div class="account-info account-active" id="instructionBtn">
+                    <p id="accountName"></p>
+                </div>
+                <a href="/logout">
+                    <button class="account-btn" id="accountExit">
+                        <p>Log Out</p>
+                    </button>
+                </a>
+ 
+
+            </div>
+        </div>
+    </div>
+
+    <div class="file-list-bl">
+        <div class="file-list-bl-content">
+
+            <div class="list-titles">
+                <div class="list-titles-left">
+                    <p>Name</p>
+
+                    <p>Type</p>
+
+                    <p>Upload date</p>
+                </div>
+                <div class="list-titles-right">
+
+                </div>
+            </div>
+
+            <div class="list-element">
+                <div class="list-element-left">
+                    <p>SealHunter</p>
+
+                    <p>PNG</p>
+
+                    <p>10.08.2005</p>
+                </div>
+
+                <div class="list-element-right">
+                    <div class="download-icon">
+                        <button>
+                            <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48" width="24" height="24">
+                                <g fill="gray">
+                                    <polygon points="24,37.1 13,24 35,24" />
+                                    <rect x="20" y="4" width="8" height="4" />
+                                    <rect x="20" y="10" width="8" height="4" />
+                                    <rect x="20" y="16" width="8" height="11" />
+                                    <rect x="6" y="40" width="36" height="4" />
+                                </g>
+                            </svg>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="list-element">
+            <div class="list-element-left">
+                <p>SealHunter2</p>
+
+                <p>PNG</p>
+
+                <p>10.08.2005</p>
+            </div>
+
+            <div class="list-element-right">
+                <div class="download-icon">
+                    <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48" width="24" height="24">
+                        <g fill="gray">
+                            <polygon points="24,37.1 13,24 35,24" />
+                            <rect x="20" y="4" width="8" height="4" />
+                            <rect x="20" y="10" width="8" height="4" />
+                            <rect x="20" y="16" width="8" height="11" />
+                            <rect x="6" y="40" width="36" height="4" />
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--script section-->
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>
+
