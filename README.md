@@ -1,4 +1,42 @@
 # File Exchanger
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#usage">Usage</a>
+    </li>
+    <li>
+      <a href="#project-structure">Project Structure</a>
+    </li>
+    <li>
+      <a href="#database">Database</a>
+      <ul>
+        <li><a href="#table-structures">Table Structures</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#server-functions">Server Functions</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+  </ol>
+</details>
+
 ## About The Project
 The essence of the project is a web application that can download files from the device to the server and vice versa. In addition, project supports the concept of users and administrators as main roles.
 
