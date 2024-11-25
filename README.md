@@ -16,7 +16,7 @@ Databases:
 * [![SQLite](https://img.shields.io/badge/SQLite-%2307405e.svg?logo=sqlite&logoColor=white)](#)
 
 ## Getting Started
-###Prerequisites
+### Prerequisites
 * Flask
   ```sh
   pip install Flask
@@ -30,7 +30,7 @@ Databases:
   pip install Flask-SQLAlchemy
   ```
 
-###Installation
+### Installation
 
 1. Clone the repository
    ```sh
@@ -99,4 +99,10 @@ Databases:
    |
    |-- ************************************************************************
 ```
-
+## Database
+Database includes tables:
+<ul>
+  <li>Account - represents users and admins</li>
+  <li>FILE - represents files that exist in storage</li>
+  <li>LOG - </li>
+</ul>
