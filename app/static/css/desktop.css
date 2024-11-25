@@ -1,9 +1,13 @@
 @media screen and (max-width: 300px) {
     .list-element-left, .list-titles-left {
-        font-size: 12px;
-        grid-template-columns: 40px 35px auto;
+
+        grid-template-columns: 35px 35px 60px auto;
         column-gap: 20px;
     }
+    .log-element-left, .log-list-titles-left {
+        grid-template-columns: 70px 70px auto;
+    }
+
 }
 
 
@@ -12,6 +16,7 @@
     .list-element, .list-titles {
         flex-direction: column;
     }
+
 
     .list-element-right {
         margin-top: 10px;
@@ -22,16 +27,24 @@
     header h1 {
         font-size: 30px;
     }
+    .list-element-left, .list-titles-left {
+        font-size: 10px;
+
+    }
+    .log-element-left, .log-list-titles-left {
+        grid-template-columns: 80px 80px auto;
+    }
 }
 
 @media screen and (min-width: 500px) {
     .list-element-left p, .list-titles-left p {
         max-width: none;
     }
-
-    .list-element-left, .list-titles-left {
-        grid-template-columns: 200px 50px auto;
+    .log-element-left, .log-list-titles-left {
+        grid-template-columns: 120px 110px auto;
     }
+
+
 }
 
 
@@ -62,8 +75,12 @@
     }
 
     .list-element-left, .list-titles-left {
-        font-size: 18px;
-        grid-template-columns: 300px 50px auto;
+        font-size: 14px;
+        grid-template-columns: 200px 60px 80px auto;
+    }
+
+    .log-element-left, .log-list-titles-left {
+        grid-template-columns: 130px 120px auto;
     }
 
         .list-element-left p, .list-titles-left p {
@@ -102,7 +119,10 @@
 
     .list-element-left, .list-titles-left {
         font-size: 18px;
-        grid-template-columns: 400px 50px auto;
+        grid-template-columns: 355px 90px 100px auto;
+    }
+    .log-element-left, .log-list-titles-left {
+        grid-template-columns: 170px 150px auto;
     }
 
     .upload-icon button svg {
@@ -126,7 +146,10 @@
     }
 
     .list-element-left, .list-titles-left {
-        font-size: 22px;
+        font-size: 18px;
+    }
+    .log-element-left, .log-list-titles-left {
+        grid-template-columns: 170px 170px auto;
     }
 }
 
@@ -138,9 +161,11 @@
 @media screen and (min-width: 1200px) {
 
     .list-element-left, .list-titles-left {
-        grid-template-columns: 700px 50px auto;
+        grid-template-columns: 500px 90px 150px auto
     }
-
+    .log-element-left, .log-list-titles-left {
+        grid-template-columns: 170px 170px auto;
+    }
     .reg-bl-content {
         width: 50%;
     }
@@ -149,8 +174,11 @@
 @media screen and (min-width: 1500px) {
 
     .list-element-left, .list-titles-left {
-        grid-template-columns: 1000px 50px auto;
+        grid-template-columns: 680px 95px 200px auto;
         font-size: 24px;
+    }
+    .log-element-left, .log-list-titles-left {
+        grid-template-columns: 170px 190px auto;
     }
 
     .list-element-right button svg {

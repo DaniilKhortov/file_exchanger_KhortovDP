@@ -55,12 +55,21 @@
                         <p>Log Out</p>
                     </button>
                 </a>
- 
+
 
             </div>
         </div>
     </div>
+    <div class="messages">
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <p class="message-{{ category }}">{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
 
+    </div>
     <div class="file-list-bl">
         <div class="file-list-bl-content">
 
@@ -68,27 +77,37 @@
                 <div class="list-titles-left">
                     <p>Name</p>
 
-                    <p>Type</p>
+                    <p>Size</p>
+
+                    <p>Downloads</p>
 
                     <p>Upload date</p>
+
+
                 </div>
                 <div class="list-titles-right">
 
                 </div>
             </div>
-
+            {% for file in files %}
+            {% if file.display == "True" %}
             <div class="list-element">
                 <div class="list-element-left">
-                    <p>SealHunter</p>
+                    <p>{{file.name}}</p>
 
-                    <p>PNG</p>
+                    <p>{{file.size}}</p>
 
-                    <p>10.08.2005</p>
+                    <p>{{file.downloads}}</p>
+
+                    <p>{{file.date}}</p>
+
+
                 </div>
+
 
                 <div class="list-element-right">
                     <div class="download-icon">
-                        <button>
+                        <button id="btnDownload{{file.id}}">
                             <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48" width="24" height="24">
                                 <g fill="gray">
                                     <polygon points="24,37.1 13,24 35,24" />
@@ -101,7 +120,6 @@
                         </button>
 
                     </div>
-
                 </div>
 
 
@@ -110,33 +128,8 @@
 
         </div>
 
-        <div class="list-element">
-            <div class="list-element-left">
-                <p>SealHunter2</p>
-
-                <p>PNG</p>
-
-                <p>10.08.2005</p>
-            </div>
-
-            <div class="list-element-right">
-                <div class="download-icon">
-                    <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48" width="24" height="24">
-                        <g fill="gray">
-                            <polygon points="24,37.1 13,24 35,24" />
-                            <rect x="20" y="4" width="8" height="4" />
-                            <rect x="20" y="10" width="8" height="4" />
-                            <rect x="20" y="16" width="8" height="11" />
-                            <rect x="6" y="40" width="36" height="4" />
-                        </g>
-                    </svg>
-                </div>
-
-            </div>
-
-
-
-        </div>
+        {% endif %}
+        {% endfor %}
 
 
     </div>
@@ -154,6 +147,7 @@
 
     <!--script section-->
     <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/download.js') }}"></script>
 </body>
 </html>
 
