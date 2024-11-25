@@ -47,55 +47,55 @@ Databases:
 
 
 ## Usage
+### File download 
+![](media/userDownload.gif)
+
+
+### File upload & configuration 
+![](media/adminPanel.gif)
+
+
+### Authorization & registration
+![](media/registration&authorization.gif)
 
 
 
 
-
-
-
-##Project Structure
+## Project Structure
 ```bash
 < PROJECT ROOT >
    |
    |-- app/
    |    |
-   |    | -- config.py                     # App Configuration
-   |    | -- models.py                     # Database Tables 
-   |    | -- forms.py                      # App Forms: login, registration
-   |    | -- util.py                       # Helpers to manipulate date, files  
-   |    | -- views.py                      # App Routing
-   |    | -- __init__.py                   # Bundle all above sections and expose the Flask APP 
+   |    | -- models.py                     # Database Tables
+   |    | -- routes.py                     # Main functions to work with client
+   |    | -- utils.py                      # Helpers to manipulate date, files  
+   |    | -- __init__.py                   # Initialization of flask app, connection to database
+   |    | -- accountsData.db               # Database
    |    |
    |    |-- static/
-   |    |    |-- <css, JS, images>         # CSS files, Javascripts files
+   |    |    |-- css/                  
+   |    |    |    |
+   |    |    |    |-- desktop.css          # Used by pages, provides adaptability of interface to the bigger screens
+   |    |    |    |-- reset.css            # Used by pages, sets vasic html-elements parameters to 0
+   |    |    |    |-- style.css            # Used by pages, responsible  for design 
+   |    |    |-- js/                  
+   |    |    |    |
+   |    |    |    |-- auth.js              # Responsible for keeping user authorized after closing window
+   |    |    |    |-- download.js          # Responsible for downloading files by user and admin
+   |    |    |    |-- elementsUtil.js      # Responsible for file upload and configuration by admin
    |    |
    |    |-- templates/
+   |    |    |    
+   |    |    |-- index.html                # Main page
+   |    |    |-- login.html                # Authorization page
+   |    |    |-- register.html             # Registration page
+   |    |    |-- admin.html                # Modified main page for admin
    |    |    |
-   |    |    |-- includes/                 # Page chunks, components
-   |    |    |    |
-   |    |    |    |-- navigation.html      # Top bar
-   |    |    |    |-- sidebar.html         # Left sidebar
-   |    |    |    |-- scripts.html         # JS scripts common to all pages
-   |    |    |    |-- footer.html          # The common footer
    |    |    |
-   |    |    |-- layouts/                  # App Layouts (the master pages)
-   |    |    |    |
-   |    |    |    |-- base.html            # Used by common pages like index, UI
    |    |    |
-   |    |    |-- accounts/                 # Auth Pages (login, register)
-   |    |    |    |
-   |    |    |    |-- login.html           # Use layout `base-fullscreen.html`
-   |    |    |    |-- register.html        # Use layout `base-fullscreen.html`  
-   |    |    |
-   |    |  index.html                      # The default page
-   |    |  page-404.html                   # Error 404 page (page not found)
-   |    |  page-500.html                   # Error 500 page (server error)
-   |    |    *.html                        # All other pages provided by the UI Kit
    |
-   |-- requirements.txt                    # Application Dependencies
-   |
-   |-- run.py                              # Start the app in development and production
+   |-- run.py                              # Starts the app 
    |
    |-- ************************************************************************
 ```
